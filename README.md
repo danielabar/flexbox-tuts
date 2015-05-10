@@ -7,6 +7,7 @@
   - [Flexbox Containers](#flexbox-containers)
   - [Column Widths](#column-widths)
   - [Width Shorthand](#width-shorthand)
+  - [Flex Direction](#flex-direction)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -113,3 +114,20 @@ Even shorter, this will make this item always be twice as wide as its siblings, 
 ```
 
 In this shorthand style, the flex-basis is not specified, therefore will be determined by the content in the div.
+
+## Flex Direction
+
+[HTML](site04/index.html) | [CSS](site04/styles.css)
+
+`flex-direction` property is used to specify whether to create columns or rows.
+This property must be applied to the container. Tells that container _how_ to layout the items within that container.
+
+Values can be `row` (default), which will arrange items horizontally, i.e. beside each other.
+
+`column` will arrange items horizontally, i.e. stacked one underneath the other.
+
+Note that when flex-direction is set to column, height of items within container is distributed in the same way width is when using row, i.e. uses flex-grow and flex-shrink.
+
+Another value of flex-direction is `row-reverse`, lays out items horizontally, but in reverse order from what they appear in dom.
+
+`column-reverse` lays out items vertically, in reverse order.
