@@ -8,6 +8,7 @@
   - [Column Widths](#column-widths)
   - [Width Shorthand](#width-shorthand)
   - [Flex Direction](#flex-direction)
+  - [Re-ordering Content](#re-ordering-content)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -124,10 +125,34 @@ This property must be applied to the container. Tells that container _how_ to la
 
 Values can be `row` (default), which will arrange items horizontally, i.e. beside each other.
 
-`column` will arrange items horizontally, i.e. stacked one underneath the other.
+`column` will arrange items vertically, i.e. stacked one underneath the other.
 
 Note that when flex-direction is set to column, height of items within container is distributed in the same way width is when using row, i.e. uses flex-grow and flex-shrink.
 
 Another value of flex-direction is `row-reverse`, lays out items horizontally, but in reverse order from what they appear in dom.
 
 `column-reverse` lays out items vertically, in reverse order.
+
+## Re-ordering Content
+
+[HTML](site05/index.html) | [CSS](site05/styles.css)
+
+`order` property can be applied to items within the flex container, and items will be ordered according to that value.
+
+Order values don't need to be sequential or match the number of items in the container.
+Will simply order from smallest to largest value.
+
+Will order rows or columns, depending on value of `flex-direction` applied to container.
+
+The `order` property is useful if you want to re-order content based on browser width.
+For example, suppose container has `max-width: 800px` and want order of divs to change when browser is 600px wide or less,
+this can be accomplished with media query that changes order:
+
+```css
+@media (max-width: 600px) {
+  .item1 { order: 100; }
+  .item2 { order: 1; }
+  .item3 { order: 1; }
+  .item4 { order: 1; }
+}
+```
