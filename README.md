@@ -6,6 +6,7 @@
   - [What is CSS Flexbox?](#what-is-css-flexbox)
   - [Flexbox Containers](#flexbox-containers)
   - [Column Widths](#column-widths)
+  - [Width Shorthand](#width-shorthand)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -84,3 +85,31 @@ then this child div will shrink twice as much as the rest of its siblings.
 
 Both `flex-grow` and `flex-shrink` properties can be applied to the same element. Then depending on the container size,
 the flexbox layout model will determine whether it needs to apply the grow or shrink properties.
+
+## Width Shorthand
+
+[HTML](site03/index.html) | [CSS](site03/styles.css)
+
+`flex` property is a shorthand that accepts three values:
+
+* flex-grow value
+* flex-shrink value
+* flex-basis value
+
+For example:
+
+```css
+.item {
+  flex: 1 1 150px;
+}
+```
+
+Even shorter, this will make this item always be twice as wide as its siblings, if they have `flex: 1`
+
+```css
+.item {
+  flex 2;
+}
+```
+
+In this shorthand style, the flex-basis is not specified, therefore will be determined by the content in the div.
