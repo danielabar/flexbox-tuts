@@ -11,6 +11,7 @@
   - [Re-ordering Content](#re-ordering-content)
   - [Adding Content](#adding-content)
   - [Content Spacing](#content-spacing)
+  - [Wrapping Content](#wrapping-content)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -172,3 +173,40 @@ Flexbox supports columns with varying amounts of text and will make them all the
 [HTML](site07/index.html) | [CSS](site07/styles.css)
 
 Use combination of padding and margin on columns.
+
+## Wrapping Content
+
+[HTML](site08/index.html) | [CSS](site08/styles.css)
+
+As browser window gets smaller in width, columns keep shrinking in width until it gets hard to read.
+
+One solution is to set `min-width` on columns, but their container still shrinks, and this creates a horizontal scroll.
+
+A better solution is to get some columns to wrap to the next line at a certain width.
+This can be achieved using `flex-wrap` property, which by default, is set to `nowrap`.
+This property is applied to the container. For example:
+
+```css
+.container {
+  background-color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: #f9f9f9;
+  color: #333;
+  font-weight: 400;
+  padding: 10px;
+  margin: 10px;
+  min-width: 150px;
+}
+```
+
+As the browser width shrinks, when items can no longer be `min-width` wide, they get wrapped to the next "row",
+starting with last item, then second last etc. (unless there's a media query in effect that changes order).
+
+`flex-wrap: wrap-reverse` has similar effect as `wrap` but reverses order, so first item gets wrapped first.
