@@ -10,6 +10,7 @@
   - [Flex Direction](#flex-direction)
   - [Re-ordering Content](#re-ordering-content)
   - [Adding Content](#adding-content)
+  - [Content Spacing](#content-spacing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -165,3 +166,9 @@ this can be accomplished with media query that changes order:
 Challenge with columns having varying amounts of text is getting the height right.
 
 Flexbox supports columns with varying amounts of text and will make them all the same height.
+
+## Content Spacing
+
+[HTML](site07/index.html) | [CSS](site07/styles.css)
+
+Use combination of padding and margin on columns.
