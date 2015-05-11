@@ -9,6 +9,7 @@
   - [Width Shorthand](#width-shorthand)
   - [Flex Direction](#flex-direction)
   - [Re-ordering Content](#re-ordering-content)
+  - [Adding Content](#adding-content)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -156,3 +157,11 @@ this can be accomplished with media query that changes order:
   .item4 { order: 1; }
 }
 ```
+
+## Adding Content
+
+[HTML](site06/index.html) | [CSS](site06/styles.css)
+
+Challenge with columns having varying amounts of text is getting the height right.
+
+Flexbox supports columns with varying amounts of text and will make them all the same height.
