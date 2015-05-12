@@ -1,0 +1,61 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 10px;
+  font-size: 10px;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.container {
+  background-color: #555;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  /* flex-flow: row wrap; */
+  flex-flow: column wrap;
+}
+
+.item {
+  background-color: #f9f9f9;
+  color: #333;
+  font-weight: 400;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  min-height: 150px;
+}
+
+.item1 {
+  flex: 1 0 auto;
+}
+
+.item2 {
+  flex: 1 0 auto;
+}
+
+.item3 {
+  flex: 1 0 auto;
+}
+
+.item4 {
+  flex: 1 0 auto;
+}
+
+/* @media (max-width: 600px) {
+  .item1 {
+    order: 100;
+  }
+  .item2 {
+    order: 1;
+  }
+  .item3 {
+    order: 1;
+  }
+  .item4 {
+    order: 1;
+  }
+}
+ */

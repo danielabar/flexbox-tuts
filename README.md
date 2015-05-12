@@ -12,6 +12,8 @@
   - [Adding Content](#adding-content)
   - [Content Spacing](#content-spacing)
   - [Wrapping Content](#wrapping-content)
+  - [Flex-Flow Shorthand](#flex-flow-shorthand)
+    - [Column Wrap Issues](#column-wrap-issues)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -210,3 +212,35 @@ As the browser width shrinks, when items can no longer be `min-width` wide, they
 starting with last item, then second last etc. (unless there's a media query in effect that changes order).
 
 `flex-wrap: wrap-reverse` has similar effect as `wrap` but reverses order, so first item gets wrapped first.
+
+## Flex-Flow Shorthand
+
+[HTML](site09/index.html) | [CSS](site09/styles.css)
+
+To recap, there are two properties that handle flow, `flex-direction` which handles direction of flow (horizontal or vertial)
+and `flex-wrap`, which affects how items behave when they become too big for container.
+
+`flex-flow` is a shorthand property that ties these two together.
+First value is flex-direction and second is flex-flow. For example:
+
+```css
+.container {
+  background-color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+```
+
+### Column Wrap Issues
+
+Note that if flex-flow is set to `column wrap`, won't see any wrapping effect unless a height is set on the container.
+
+However, with a height set, column content will overflow. To fix this, set `flex-basis` on each item to `auto`.
+
+After fixing that, next problem will be that content takes up 100% of width so when wraps to next column,
+it goes off the screen width.
+
+To fix this, remove `min-width` from items and instead set a small-ish `width`.
+And also set `min-height` on each item.
