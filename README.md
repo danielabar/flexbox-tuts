@@ -15,7 +15,9 @@
   - [Flex-Flow Shorthand](#flex-flow-shorthand)
     - [Column Wrap Issues](#column-wrap-issues)
   - [Cross-Axis Alignment](#cross-axis-alignment)
+    - [Columns](#columns)
     - [Rows](#rows)
+  - [Justifying Content](#justifying-content)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -251,6 +253,8 @@ And also set `min-height` on each item.
 
 [HTML](site10/index.html) | [CSS](site10/styles.css)
 
+### Columns
+
 In previous exercise where columns were wrapped, there is a big gap between the columns.
 Because the items have fixed width of 200 set, flexbox is trying to space them out evenly.
 
@@ -286,4 +290,28 @@ will simply space things out.
 
 ### Rows
 
+When dealing with rows, the main axis is horizontal, therefore the cross-axis is vertical.
+
 If `flex-flow` is set to `row wrap`, then `align-content` affects the up and down cross axis (i.e. vertical alignment).
+
+## Justifying Content
+
+[HTML](site11/index.html) | [CSS](site11/styles.css)
+
+This is the opposite of align-content in that it deals with the _main_ axis rather than the _cross axis_..
+
+When dealing with rows, the main axis is horizontal. `justify-content` property is applied to the container.
+For example, to center rows horizontally:
+
+```css
+.container {
+  background-color: #555;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+```
+
+`justify-content` can be set to the same values as `align-content` (flex-start, flex-end, space-around, etc).
