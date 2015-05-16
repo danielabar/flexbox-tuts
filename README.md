@@ -14,6 +14,8 @@
   - [Wrapping Content](#wrapping-content)
   - [Flex-Flow Shorthand](#flex-flow-shorthand)
     - [Column Wrap Issues](#column-wrap-issues)
+  - [Cross-Axis Alignment](#cross-axis-alignment)
+    - [Rows](#rows)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -245,4 +247,43 @@ it goes off the screen width.
 To fix this, remove `min-width` from items and instead set a small-ish `width`.
 And also set `min-height` on each item.
 
-foo
+## Cross-Axis Alignment
+
+[HTML](site10/index.html) | [CSS](site10/styles.css)
+
+In previous exercise where columns were wrapped, there is a big gap between the columns.
+Because the items have fixed width of 200 set, flexbox is trying to space them out evenly.
+
+`align-content` property can be used to adjust the extra space between columns, i.e. horizontal cross axis.
+
+Alignment properties try to adjust positioning of items within the container when there is space left over,
+i.e. will see the effect when the items have a hard-coded width (columns) or height (rows),
+because if there is no hard-coded width or height, then there's never any space left over.
+
+This property is applied to the container. For example, to align to the start of the cross axis:
+
+```css
+.container {
+  background-color: #555;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+}
+```
+
+Setting `align-content: center` will keep columns next to each other, but centered within the container.
+
+`flex-end` will align all the content to the right side of container.
+
+`space-around` will put even spacing around both sides of each column.
+
+`space-between` gets even space between the columns, but doesn't deal with space at left and right ends.
+
+`stretch` is the default value, which tries to adjust width of items, but if the items have a hard coded width,
+will simply space things out.
+
+### Rows
+
+If `flex-flow` is set to `row wrap`, then `align-content` affects the up and down cross axis (i.e. vertical alignment).
