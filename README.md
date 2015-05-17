@@ -22,6 +22,7 @@
   - [Adding Vendor Prefixes](#adding-vendor-prefixes)
   - [Building a simple layout](#building-a-simple-layout)
   - [Styling the layout](#styling-the-layout)
+  - [Finishing the styles](#finishing-the-styles)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -409,3 +410,7 @@ Start with unstyled html to get the content in place.
 ## Styling the layout
 
 [HTML](site15/index.html) | [CSS](site15/styles.css)
+
+## Finishing the styles
+
+[HTML](site16/index.html) | [CSS](site16/styles.css)

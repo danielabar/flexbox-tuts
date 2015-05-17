@@ -1,0 +1,122 @@
+/* ---------------------------------- */
+/* Resets */
+/* ---------------------------------- */
+
+body, html {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 0;
+  margin: 10px;
+  color: #484848;
+}
+
+
+/* ---------------------------------- */
+/* Outer Container */
+/* ---------------------------------- */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* ---------------------------------- */
+/* Header */
+/* ---------------------------------- */
+
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header h3 {
+  margin-top: 0;
+}
+
+
+/* ---------------------------------- */
+/* Content */
+/* ---------------------------------- */
+
+.content {
+  display: flex;
+}
+
+.sidebar,
+.main {
+  background-color: #fff;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+/* ---------------------------------- */
+/* Sidebar */
+/* ---------------------------------- */
+
+.sidebar {
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+/* ---------------------------------- */
+/* Main */
+/* ---------------------------------- */
+
+.main {
+  flex: 2;  /* Main will be twice as big as sidebar */
+}
+
+
+/* ---------------------------------- */
+/* Inner Container */
+/* ---------------------------------- */
+
+.inner-container {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+}
+
+.item {
+  flex: 1; /* make all items in inner-container the same width */
+  text-align: center;
+  color: #fff;
+}
+
+.item1 {
+  background-color: green;
+}
+
+.item2 {
+  background-color: orange;
+}
+
+.item3 {
+  background-color: blue;
+}
+
+
+/* ---------------------------------- */
+/* Footer */
+/* ---------------------------------- */
+
+footer {
+  width: 100%;
+  padding: 10px;
+  background-color: #7a7a7a;
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 10px;
+}
