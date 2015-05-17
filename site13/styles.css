@@ -1,0 +1,69 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 10px;
+  font-size: 10px;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+.container {
+  background-color: #ddd;
+  min-height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.item {
+  background-color: #f9f9f9;
+  color: #333;
+  font-weight: 400;
+  padding: 10px;
+  margin: 10px;
+}
+
+.item1 {
+  padding-top: 20px;
+  width: 150px;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.item2 {
+  padding-top: 50px;
+  width: 150px;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+.item3 {
+  padding-top: 30px;
+  width: 150px;
+}
+
+.item4 {
+  margin-top: 20px;
+  width: 150px;
+}
+
+.item5 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}

@@ -19,6 +19,7 @@
     - [Rows](#rows)
   - [Justifying Content](#justifying-content)
   - [Align Items](#align-items)
+  - [Adding Vendor Prefixes](#adding-vendor-prefixes)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -367,3 +368,32 @@ This will make item1 ignore the `align-items` property st on the container and a
 
 In summary `align-items` allows for vertical alignment of items within a container,
 without requiring that they stretch to the full height of the container.
+
+## Adding Vendor Prefixes
+
+[HTML](site13/index.html) | [CSS](site13/styles.css)
+
+Install atom or brackets Autoprefixer plugin to generate vendor prefixed css.
+Otherwise for example, it doesn't render properly in Safari.
+
+For example, running Autoprefixer on flex container generates:
+
+```css
+.container {
+  background-color: #ddd;
+  min-height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+```
