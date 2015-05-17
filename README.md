@@ -20,6 +20,7 @@
   - [Justifying Content](#justifying-content)
   - [Align Items](#align-items)
   - [Adding Vendor Prefixes](#adding-vendor-prefixes)
+  - [Building a simple layout](#building-a-simple-layout)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -373,7 +374,7 @@ without requiring that they stretch to the full height of the container.
 
 [HTML](site13/index.html) | [CSS](site13/styles.css)
 
-Install atom or brackets Autoprefixer plugin to generate vendor prefixed css.
+Install Autoprefixer plugin in your editor of choice to generate vendor prefixed css.
 Otherwise for example, it doesn't render properly in Safari.
 
 For example, running Autoprefixer on flex container generates:
@@ -397,3 +398,9 @@ For example, running Autoprefixer on flex container generates:
           align-items: baseline;
 }
 ```
+
+## Building a simple layout
+
+[HTML](site14/index.html) | [CSS](site14/styles.css)
+
+Start with unstyled html to get the content in place.
