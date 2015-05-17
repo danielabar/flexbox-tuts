@@ -1,0 +1,77 @@
+/* ---------------------------------- */
+/* Resets */
+/* ---------------------------------- */
+
+body, html {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 0;
+  margin: 10px;
+  color: #484848;
+}
+
+
+/* ---------------------------------- */
+/* Outer Container */
+/* ---------------------------------- */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  background-color: #f9f9f9;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+/* ---------------------------------- */
+/* Header */
+/* ---------------------------------- */
+
+header {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px;
+}
+
+header h1 {
+  margin-bottom: 0;
+}
+
+header h3 {
+  margin-top: 0;
+}
+
+
+/* ---------------------------------- */
+/* Content */
+/* ---------------------------------- */
+
+.content {
+  display: flex;
+}
+
+.sidebar,
+.main {
+  background-color: #fff;
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+/* ---------------------------------- */
+/* Sidebar */
+/* ---------------------------------- */
+
+.sidebar {
+  flex: 1;
+  margin-right: 10px;
+}
+
+
+/* ---------------------------------- */
+/* Main */
+/* ---------------------------------- */
+
+.main {
+  flex: 2;  // Main will be twice as big as sidebar
+}
