@@ -18,6 +18,7 @@
     - [Columns](#columns)
     - [Rows](#rows)
   - [Justifying Content](#justifying-content)
+  - [Align Items](#align-items)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -315,3 +316,54 @@ For example, to center rows horizontally:
 ```
 
 `justify-content` can be set to the same values as `align-content` (flex-start, flex-end, space-around, etc).
+
+## Align Items
+
+[HTML](site12/index.html) | [CSS](site12/styles.css)
+
+`align-items` is a property to align items vertically in the container based on the height of the items.
+Default value is `stretch`, which makes items fill the entire height of the container if they don't have an
+explicit height set.
+
+`align-items` is set on the container, for example:
+
+```css
+.container {
+  background-color: #ddd;
+  min-height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+}
+```
+
+`flex-start` will lets items retain their natural height based on how much content is inside each item.
+This property also aligns top edge of the items with the top edge of the container.
+
+'flex-end' aligns the bottom edges of the items with the bottom edge of the container,
+i.e. moves all the items to the bottom of the container.
+
+When dealing with rows, main axis is horizontal (left to right), therefore `align-items` aligns items on the cross axis,
+i.e vertical axis, while retaining their natural height.
+
+`center` will vertically center the items.
+
+`baseline` at first appears to have same effect as `flex-start`, but if item's content is in different places due to a variety of margin and padding, then `baseline` will vertically align the start of the text in each item to each other.
+i.e. `baseline` adjusts for margin and padding.
+
+`align-self` property can be applied to an individual item within the flex container, for example:
+
+```css
+.item1 {
+  padding-top: 20px;
+  width: 150px;
+  align-self: flex-end;
+}
+```
+
+This will make item1 ignore the `align-items` property st on the container and apply its own alignment instead.
+
+In summary `align-items` allows for vertical alignment of items within a container,
+without requiring that they stretch to the full height of the container.
